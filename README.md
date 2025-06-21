@@ -58,11 +58,11 @@ Hospital_Management_System-Python/
 
 ## 🖼️ Screenshots
 
-### 🏠 Dashboard Preview
-![Dashboard](ScreenShots/hospital_dashboard_collage_attractive.png)
-
 ### 🔒 Login Page
 ![Login](ScreenShots/Screenshot%202025-06-21%20123850.png)
+
+### 🏠 Dashboard Preview
+![Dashboard](ScreenShots/hospital_dashboard_collage_attractive.png)
 
 ### 🧾 Department Access
 ![Access](ScreenShots/Screenshot%202025-06-21%20124118.png)
