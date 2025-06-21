@@ -56,7 +56,6 @@ Hospital_Management_System-Python/
 ├── main_file.py # Main launcher file
 ├── README.md # This file
 
-## 🖼️ Screenshots
 
 ---
 
