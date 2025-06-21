@@ -62,27 +62,27 @@ Hospital_Management_System-Python/
 
 ## 🖼️ Screenshots
 
-### 🏠 Main Dashboard (Collage View)
-![Dashboard](ScreenShots/hospital_dashboard_collage_attractive.png)
-
 ### 🔒 Login Page
 ![Login Page](ScreenShots/Screenshot%202025-06-21%20123850.png)
 
-### 🏥 Home Page Icons
+### 🏥 Admin_Dashboard
 ![Home Page](ScreenShots/Screenshot%202025-06-21%20124020.png)
 
-### 🧾 Department Access (Admin/Doctor/Reception/Management)
+### 🧾 Doctor_Dashboard
 ![Department Access](ScreenShots/Screenshot%202025-06-21%20124118.png)
 
-### 🖼️ GUI Page with Icons
+### 🧐 Function of Doctor_Dashboard
+![Dashboard](ScreenShots/hospital_dashboard_collage_attractive.png)
+
+### 📋 Reception_dashboard
 ![GUI Icons](ScreenShots/Screenshot%202025-06-21%20124348.png)
 
-### 📋 Appointment Button Preview
-![Appointment](ScreenShots/Screenshot%202025-06-21%20124521.png)
-
-### 📷 ChatGPT Image Ref - 1
+### 🧐 Function of Reception_dashboard
 ![ChatGPT Ref 1](ScreenShots/ChatGPT%20Image%20Jun%2021,%202025,%2001_45_04%20PM.png)
 
-### 📷 ChatGPT Image Ref - 2
+### 📋 Management_Dashboard
+![Appointment](ScreenShots/Screenshot%202025-06-21%20124521.png)
+
+### 🧐 functions of Management_Dashboard
 ![ChatGPT Ref 2](ScreenShots/ChatGPT%20Image%20Jun%2021,%202025,%2001_49_18%20PM.png)
 
