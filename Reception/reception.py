@@ -7,12 +7,15 @@ from Database.database import insert_appointment, get_doctor_names, fetch_patien
 
 
 # Create a window to open_reception_dashboard
-def open_reception_dashboard():
+def open_reception_dashboard(login_window):
     reception_dashboard = Toplevel()
     reception_dashboard.title("Reception Dashboard - Hospital Management System")
     reception_dashboard.geometry("1000x600")
     reception_dashboard.maxsize(1000, 600)
     reception_dashboard.minsize(1000, 600)
+
+    # hide the login window
+    login_window.withdraw()
 
     # Add the background image in Reception Dashboard
     bg_image = Image.open(r"E:\Python(HMS)\Reception.png")
@@ -48,8 +51,11 @@ def open_reception_dashboard():
     create_glass_button("\ud83d\udcb5 Cashier", y=430, command=open_cashier)
 
     # Exit
-    create_glass_button("\ud83d\udeaa Exit", y=530, command=reception_dashboard.destroy)
+    def close_dashboard():
+        reception_dashboard.destroy()
+        login_window.deiconify()
 
+    create_glass_button("🚪 Exit", y=530, command=close_dashboard)
 
 # Create a window to open_appointment_schedule
 def open_appointment_schedule():

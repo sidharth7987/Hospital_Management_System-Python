@@ -33,11 +33,14 @@ def display_data(title, records, columns):
 
 
 # Create a new window to open_admin_dashboard
-def open_admin_dashboard():
+def open_admin_dashboard(login_window):
     Admin_dashboard = Toplevel()
     Admin_dashboard.title("Doctor Dashboard - Hospital Management System")
     Admin_dashboard.geometry("1000x600")
     Admin_dashboard.resizable(False, False)
+
+    # Hide the login window
+    login_window.withdraw()
 
     # Add the background image
     bg_image = Image.open(r"E:\Python(HMS)\Admin.png")
@@ -144,8 +147,9 @@ def open_admin_dashboard():
     btn_staff_details.place(x=750, y=450)
 
     # Exit button at the center
-    btn_exit = customtkinter.CTkButton(
-        Admin_dashboard, text="Exit", fg_color="red", hover_color="darkred", width=200, height=40,
-        command=Admin_dashboard.destroy
-    )
-    btn_exit.place(x=370, y=530)
+    def close_dashboard():
+        Admin_dashboard.destroy()
+        login_window.deiconify()
+
+    customtkinter.CTkButton(Admin_dashboard, text="Exit", fg_color="red", hover_color="darkred",
+                            width=200, height=40, command=close_dashboard).place(x=370, y=530)

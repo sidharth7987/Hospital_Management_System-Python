@@ -43,19 +43,23 @@ def validate_login():
 
             # Redirect to role-specific dashboard here
             if role == "Admin":
-                open_admin_dashboard()
+                win.withdraw()  
+                open_admin_dashboard(win)
             elif role == "Doctor":
-                open_doctor_dashboard()
+                win.withdraw()  
+                open_doctor_dashboard(win)
             elif role == "Receptionist":
-                open_reception_dashboard()
+                win.withdraw()
+                open_reception_dashboard(win)
             elif role == "Management":
-                open_management_dashboard()
+                win.withdraw()
+                open_management_dashboard(win)
         
         else:
-            messagebox.showerror("Login Failed !", "Invaild username or Password")
+            messagebox.showerror("Login Failed !", "Invalid username or Password")
             
     else:
-        messagebox.showerror("Login Failed !", "Please select s valid role")          
+        messagebox.showerror("Login Failed !", "Please select a valid role")          
 
 
 

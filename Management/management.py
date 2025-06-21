@@ -526,12 +526,15 @@ def open_housekeeping_management():
 
 
 # Create a window to open_management_dashboard
-def open_management_dashboard():
+def open_management_dashboard(login_window):
     management_dashboard = Toplevel()
     management_dashboard.title("Management Dashboard - Hospital Management System")
     management_dashboard.geometry("1000x600")
     management_dashboard.maxsize(1000, 600)
     management_dashboard.minsize(1000, 600)
+
+    # hide the login window
+    login_window.withdraw()
 
     # Add the background image in reception Dashboard
     bg_image = Image.open(r"E:\Python(HMS)\Management.png")
@@ -561,8 +564,11 @@ def open_management_dashboard():
     create_glass_button("🧝 Housekeeping Management", y= 370, command= open_housekeeping_management)
 
     # Exit
-    create_glass_button("🚪 Exit", y=490, command= management_dashboard.destroy)
+    def exit_and_return():
+        management_dashboard.destroy()
+        login_window.deiconify()
 
+    create_glass_button("🚪 Exit", y=490, command=exit_and_return)
 
 
 

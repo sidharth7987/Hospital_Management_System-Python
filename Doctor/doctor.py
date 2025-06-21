@@ -7,11 +7,14 @@ import Database.database as database
 
 
 # Create a new window to open_doctor_dashboard
-def open_doctor_dashboard():
+def open_doctor_dashboard(login_window):
     management_dashboard = Toplevel()
     management_dashboard.title("Doctor Dashboard - Hospital Management System")
     management_dashboard.geometry("1000x600")
     management_dashboard.resizable(False, False)
+
+    # Hide the login window
+    login_window.withdraw()
 
     # Add the background image
     bg_image = Image.open(r"E:\Python(HMS)\Doctor.png")
@@ -49,9 +52,19 @@ def open_doctor_dashboard():
     emergency_button = customtkinter.CTkButton(management_dashboard, text="Emergency", command= open_emergency_dashboard, **button_style)
     emergency_button.place(x=700, y=350)
 
-    # Exit Button (NO CHANGES)
-    btn_exit = customtkinter.CTkButton(management_dashboard, text="Exit", fg_color="red", hover_color="darkred", command=management_dashboard.destroy)
-    btn_exit.place(x=420, y=555)  # Same position as before
+    # ✅ Exit button that restores login window
+    def close_dashboard():
+        management_dashboard.destroy()
+        login_window.deiconify()
+
+    btn_exit = customtkinter.CTkButton(
+        management_dashboard,
+        text="Exit",
+        fg_color="red",
+        hover_color="darkred",
+        command=close_dashboard
+    )
+    btn_exit.place(x=420, y=555)
 
 # Function to show a message when a button is clicked
 def show_section(section):
